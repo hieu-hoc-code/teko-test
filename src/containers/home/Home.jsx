@@ -11,6 +11,7 @@ const Home = () => {
   const dispatch = useDispatch()
   useEffect(() => dispatch(fetchProducts()), [])
   useEffect(() => dispatch(fetchColors()), [])
+  
   return (
     <div className="products">
       <div className="edit-pro">

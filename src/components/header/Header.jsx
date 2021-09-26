@@ -13,12 +13,14 @@ class Header extends Component {
           <div className="title">
             <NavLink to="/">
               <img src={Logo} alt="logo" />
-              Teko Pro
+
+              Teko Laptop
             </NavLink>
+            <h2>Product</h2>
           </div>
           <div className="our">
             <div className="tohome">
-              <NavLink activeClassName="show" to="/"><h1>Our Product</h1></NavLink>
+              <NavLink activeClassName="show" to="/"><h1>Our Laptops</h1></NavLink>
             </div>
           </div>
           <div className="menu">
