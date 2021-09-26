@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Exit from 'assets/images/cross.png'
 import './modal.scss'
 
@@ -19,7 +19,7 @@ const Modal = ({ productsChange, onListenChild }) => {
             <p>{item.name}</p>
             <p>Id : {item.id}</p>
             <p>
-              SKU : <span>{item.sku}</span>
+              SKU : <span className="sku">{ item.sku}</span>
             </p>
             <p>
               Color : <span>{item.color}</span>

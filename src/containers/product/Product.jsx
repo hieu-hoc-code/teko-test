@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import {
-  handleItemValue
-} from 'redux/actions/productAction'
+import { handleItemValue } from 'redux/actions/productAction'
 import { useSelector, useDispatch } from 'react-redux'
 import convertColor from 'utils/convertColor'
 import Modal from 'components/modal/Modal'
@@ -20,7 +18,7 @@ const Product = () => {
   // function handle
   const submitHandle = () => {
     let products = []
-    changedItem.forEach(index => {
+    changedItem.forEach((index) => {
       products.push(items[index])
     })
     setProductsChange([...products])
@@ -28,7 +26,7 @@ const Product = () => {
   }
 
   const changeSelectHandle = (index) => {
-    let isIndex = changedItem.find(position => position === index)
+    let isIndex = changedItem.find((position) => position === index)
     if (isIndex === undefined) {
       setChangedItem([...changedItem, index])
     }
@@ -49,7 +47,11 @@ const Product = () => {
         </button>
       </div>
       {/* modal */}
-      {isModal ? <Modal productsChange={productsChange} onListenChild={submitHandle} /> : <div></div>}
+      {isModal === false ? (
+        <Modal productsChange={productsChange} onListenChild={submitHandle} />
+      ) : (
+        <div></div>
+      )}
       <div className="table-product" id="tb-product">
         <table>
           <thead>
@@ -79,18 +81,28 @@ const Product = () => {
                     type="text"
                     maxLength="30"
                     defaultValue={item.name}
-                    onChange={(e) => setItemValue(item, 'name', e.target.value, index) }
+                    onChange={(e) =>
+                      setItemValue(item, 'name', e.target.value, index)
+                    }
                   ></input>
                 </td>
                 <td>
                   <input
                     type="text"
                     defaultValue={item.sku}
-                    onChange={(e) => setItemValue(item, 'sku', e.target.value, index) }
+                    onChange={(e) =>
+                      setItemValue(item, 'sku', e.target.value, index)
+                    }
                   ></input>
                 </td>
                 <td>
-                  <select name="color" id="color" onChange={e => setItemValue(item, 'color', e.target.value, index)}>
+                  <select
+                    name="color"
+                    id="color"
+                    onChange={(e) =>
+                      setItemValue(item, 'color', e.target.value, index)
+                    }
+                  >
                     <option value>Default</option>
                     {colors.map((color) => (
                       <option

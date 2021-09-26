@@ -3,7 +3,7 @@
 .products{
   background-color: $app-bg-color;
   color: $app-color;
-  padding: calc(#{$app-padding * 2}) 0;
+  padding: $app-padding 0;
   .edit-pro{
     width: 80%;
     text-align: right;
@@ -16,15 +16,10 @@
       color: #333;
       border-radius: 8px;
       background-color: aquamarine;
-      
+      box-shadow: 5px 3px 3px rgb(116, 116, 116);
       &:hover{
         background-color: darken(aquamarine, 15) ;
         color: black;
-        box-shadow: 5px 3px 3px rgb(116, 116, 116);
-        transform: translate(-3px);
-      }
-      &:active{
-        box-shadow: none;
       }
     }
   }
@@ -56,12 +51,17 @@
           display: flex;
           justify-content: center;
           img{
-            width: 100px;
+            width: 100%;
           }
         }
         .item{
           display: grid;
-  
+          h3{
+            font-size: 16px;
+          }
+          span{
+            font-size: 12px;
+          }
         }
       }
       
