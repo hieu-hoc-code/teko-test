@@ -1,9 +1,45 @@
 @import '_setting.scss';
 
-// .update{
-//   .content-product{
-//     .product-container{
-
-//     }
-//   }
-// }
+.update{
+  .table-product{
+    background-color: rgb(209, 248, 194);
+    width: 90%;
+    margin: 42px auto;
+    .submit{
+      width: 100%;
+      background-color: antiquewhite;
+      button{
+        margin-bottom: 12px;
+        padding: 5px 15px;
+        float: right;
+        border: none;
+        background-color: aquamarine;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover{
+          box-shadow: 2px 2px 3px #bbb;
+          background-color: darken(aquamarine, 10);
+        }
+        &:active{
+          transform: translateY(3px);
+          box-shadow: none;
+        }
+      }
+    }
+    table{
+      width: 100%;
+      tr{
+        td{
+          text-align: center;
+          img{
+            height: 50px;
+          }
+        }
+      }
+      .title-pro{
+        font-weight: bold;
+        height: 60px;
+      }
+    }
+  }
+}

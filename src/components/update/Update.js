@@ -1,51 +1,50 @@
 import React, { Component } from 'react'
 
-import Laptop from 'components/images/laptop.png'
-
 import './update.scss'
 
 class Update extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      students: [
-        { id: 1, Error: 'Product error 101', name: 'Laptop1', SKU: '1710135', Color: 'Black' },
-        { id: 2, Error: 'Product error 102', name: 'Laptop2', SKU: '1710136', Color: 'Black' },
-        { id: 3, Error: 'Product error 103', name: 'Laptop3', SKU: '1710137', Color: 'Black' },
-        { id: 4, Error: 'Product error 104', name: 'Laptop4', SKU: '1710138', Color: 'Black' }
-      ]
-    }
-  }
-
-  renderTableData() {
-    return this.state.students.map((student, index) => {
-      const { id, Error, name, SKU, Color } = student
-      return (
-        <tr key={id}>
-          <td>{id}</td>
-          <td>{Error}</td>
-          <td><img src={Laptop} alt="img" ></img></td>
-          <td>{name}</td>
-          <td>{SKU}</td>
-          <td><input type="text" value={Color}></input></td>
-        </tr>
-      )
-    })
-  }
-
-  renderTableHeader() {
-    const header = Object.keys(this.state.students[0])
-    return header.map((key, index) => <th key={index}>{key.toUpperCase()}</th>)
-  }
-
   render() {
     return (
-      <table>
-        <tbody>
-          <tr>{this.renderTableHeader()}</tr>
-          {this.renderTableData()}
-        </tbody>
-      </table>
+      <div className="update">
+        <div className="table-product">
+          <div className="submit">
+            <button type="button">Submit</button>
+          </div>
+          <table>
+            <tr className="title-pro">
+              <td>ID</td>
+              <td>Error Description</td>
+              <td>Product Image</td>
+              <td>Product Name</td>
+              <td>SKU</td>
+              <td>Color</td>
+            </tr>
+            <tr>
+              <td>
+                <span>01</span>
+              </td>
+              <td>
+                <span>Product eror 101</span>
+              </td>
+              <td>
+                <img src="" alt="img product"></img>
+              </td>
+              <td>
+                <input type="text" maxLength="30"></input>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+              <td>
+                <select name="color" id="color">
+                  <option value="black">Black</option>
+                  <option value="White">White</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     )
   }
 }
