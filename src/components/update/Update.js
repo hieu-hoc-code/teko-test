@@ -52,6 +52,10 @@ class Update extends Component {
                 <select name="color" id="color">
                   <option value="black">Black</option>
                   <option value="White">White</option>
+                  <option value="White">Red</option>
+                  <option value="White">Green</option>
+                  <option value="White">Blue</option>
+                  <option value="White">Yellow</option>
                 </select>
               </td>
             </tr>

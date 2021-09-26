@@ -6,7 +6,6 @@
   padding: calc(#{$app-padding * 2}) 0;
   .edit-pro{
     width: 90%;
-    margin: auto;
     text-align: right;
     margin-bottom: 25px;
     a{
@@ -16,40 +15,51 @@
       color: #333;
       border-radius: 8px;
       background-color: aquamarine;
+      box-shadow: 5px 3px 3px rgb(116, 116, 116);
       &:hover{
         background-color: darken(aquamarine, 15) ;
         color: black;
-        box-shadow: 5px 3px 3px rgb(116, 116, 116);
       }
       &:active{
-        transform: translateY(3px);
         box-shadow: none;
       }
     }
   }
   .content-pro{
-    width: 90%;
+    width: 75%;
     margin: auto;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 300px 300px;
+    background-color: $app-bg-color;
+    border-radius: 12px;
     .product-container{
-      border: 3px solid rgb(32, 32, 32);
+      box-shadow: 5px 5px 8px #bbb;
       margin: 12px;
       background-color: white;
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.05);
+        transition: 0.5s;
+      }
       .img-product{
+        display: flex;
+        justify-content: center;
         img{
           width: 100px;
         }
       }
       .item{
         display: grid;
+
       }
     }
   }
   .end{
     text-align: center;
-    padding-bottom: 30px;
+    padding: 30px;
     font-size: 32px;
   }
 }
