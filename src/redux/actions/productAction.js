@@ -7,10 +7,10 @@ export const fetchProducts = () => async (dispatch) => {
     const data = response.data
     dispatch({
       type: FETCH_PRODUCTS,
-      payload: data,
+      payload: data
     })
   } catch (err) {
-    console.log(err)
+    return false
   }
 }
 
@@ -20,16 +20,16 @@ export const fetchColors = () => async (dispatch) => {
     const data = response.data
     dispatch({
       type: FETCH_COLORS,
-      payload: data,
+      payload: data
     })
   } catch (err) {
-    console.log(err)
+    return false
   }
 }
 
 export const handleItemValue = (val) => (dispatch) => {
   dispatch({
     type: CHANGE_ITEM_VALUE,
-    payload: val,
+    payload: val
   })
 }

@@ -30,7 +30,6 @@ class Header extends Component {
             <span>Acer</span>
           </div>
         </div>
-        
       </div>
     )
   }

@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {
-  fetchProducts,
-  fetchColors,
-  handleItemValue,
+  handleItemValue
 } from 'redux/actions/productAction'
-import { useSelector, useDispatch, connect } from 'react-redux'
-
+import { useSelector, useDispatch } from 'react-redux'
 import convertColor from 'utils/convertColor'
 import Modal from 'components/modal/Modal'
 
@@ -14,19 +11,36 @@ import './product.scss'
 const Product = () => {
   const { items, colors } = useSelector((state) => state.product)
   const dispatch = useDispatch()
-  useEffect(() => dispatch(fetchProducts()), [])
-  useEffect(() => dispatch(fetchColors()), [])
 
+  // state
   const [isModal, setIsModal] = useState(true)
+  const [changedItem, setChangedItem] = useState([])
+  const [productsChange, setProductsChange] = useState([])
 
+  // function handle
   const submitHandle = () => {
+    let products = []
+    changedItem.forEach(index => {
+      products.push(items[index])
+    })
+    setProductsChange([...products])
     setIsModal(!isModal)
   }
 
+  const changeSelectHandle = (index) => {
+    let isIndex = changedItem.find(position => position === index)
+    if (isIndex === undefined) {
+      setChangedItem([...changedItem, index])
+    }
+  }
+
+  // dispatch action
   const setItemValue = (item, key, val, index) => {
     item[`${key}`] = val
-    dispatch(handleItemValue({item: item, index: index}))
+    changeSelectHandle(index)
+    dispatch(handleItemValue({ item: item, index: index }))
   }
+
   return (
     <div className="update">
       <div className="submit">
@@ -35,7 +49,7 @@ const Product = () => {
         </button>
       </div>
       {/* modal */}
-      {isModal === false ? <Modal /> : <div></div>}
+      {isModal ? <Modal productsChange={productsChange} onListenChild={submitHandle} /> : <div></div>}
       <div className="table-product" id="tb-product">
         <table>
           <thead>
@@ -65,22 +79,23 @@ const Product = () => {
                     type="text"
                     maxLength="30"
                     defaultValue={item.name}
+                    onChange={(e) => setItemValue(item, 'name', e.target.value, index) }
                   ></input>
                 </td>
                 <td>
                   <input
                     type="text"
                     defaultValue={item.sku}
-                    // onChange={(e) => setItemValue(item, 'sku', e.target.value, index) }
+                    onChange={(e) => setItemValue(item, 'sku', e.target.value, index) }
                   ></input>
                 </td>
                 <td>
-                  <select name="color" id="color" className="color-pro">
+                  <select name="color" id="color" onChange={e => setItemValue(item, 'color', e.target.value, index)}>
                     <option value>Default</option>
                     {colors.map((color) => (
                       <option
                         key={color.id}
-                        value={color.name}
+                        defaultValue={color.name}
                         selected={
                           convertColor(colors, item.color) === color.name
                         }
@@ -95,7 +110,6 @@ const Product = () => {
           </tbody>
         </table>
       </div>
-      
     </div>
   )
 }

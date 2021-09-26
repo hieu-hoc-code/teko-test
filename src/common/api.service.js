@@ -9,7 +9,7 @@ const ApiService = {
   },
   get(resource, params) {
     return axios.get(`${resource}`, params, credentials)
-  },
+  }
 }
 
 export default ApiService
