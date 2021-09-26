@@ -5,8 +5,20 @@
   color: $app-color;
   .title{
     padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    a{
+      text-decoration: none;
+      padding: 5px 15px;
+      background-color: white;
+      color: black;
+      box-shadow: 3px 3px 5px rgb(255, 240, 240);
+      &:active{
+        transform: translateY(3px);
+        box-shadow: none;
+      }
+    }
     h2{
-      text-align: right;
       margin: 0;
       padding: 0;
     }
