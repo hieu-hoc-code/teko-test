@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import './products.scss'
 
@@ -8,6 +9,9 @@ class Products extends Component {
   render() {
     return (
       <div className="products">
+        <div className="edit-pro">
+          <NavLink activeClassName="show" to="/update">Update Products</NavLink>
+        </div>
         <div className="content-pro">
           <div className="product-container">
             <div className="img-product">

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './update.scss'
 
 import Exit from 'components/images/cross.png'
+import { Link } from 'react-router-dom'
 
 function openForm() {
   document.getElementById('popup-data').style.display = 'block'

@@ -3,16 +3,23 @@ import { NavLink } from 'react-router-dom'
 
 import './header.scss'
 
+import Logo from 'components/images/logo.png'
+
 class Header extends Component {
   render() {
     return (
       <div className="header">
         <div className="title">
-          <NavLink activeClassName="show" to="/update">Update Products</NavLink>
+          <span>
+            <img src={Logo} alt="logo" />
+            Teko Laptop
+          </span>
           <h2>Product</h2>
         </div>
         <div className="our">
-          <h1>Our Laptops</h1>
+          <div className="tohome">
+            <NavLink activeClassName="show" to="/"><h1>Our Laptops</h1></NavLink>
+          </div>
         </div>
         <div className="menu">
           <span>All Products</span>

@@ -3,19 +3,28 @@
 .header{
   background-color: $app-bg-color;
   color: $app-color;
+  position: relative;
+  padding-bottom: 25px;
+  &::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    width: 90%;
+    height: 3px;
+    background-color: rgb(180, 180, 180);
+    transform: translate( 5%, 0);
+  }
   .title{
     padding: 2rem 5rem;
     display: flex;
     justify-content: space-between;
-    a{
-      text-decoration: none;
-      padding: 5px 15px;
-      background-color: white;
-      color: black;
-      box-shadow: 3px 3px 5px rgb(255, 240, 240);
-      &:active{
-        transform: translateY(3px);
-        box-shadow: none;
+    span{
+      font-style: italic;
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(248, 79, 73);
+      img{
+        width: 6rem;
       }
     }
     h2{
@@ -24,10 +33,18 @@
     }
   }
   .our{
-    text-align: center;
+    width: 100%;
     font-size: 40px;
-    h1{
-      margin: 0 auto 54px;
+    display: flex;
+    justify-content: center;
+    .tohome{
+      width: 550px;
+      text-align: center;
+      a{
+        h1{
+          margin: 0 auto 54px;
+        }
+      }
     }
   }
   .menu{
@@ -36,5 +53,13 @@
     justify-content: space-around;
     transform: translateX(50%);
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    span{
+      cursor: pointer;
+      &:hover{
+        color: blue;
+      }
+    }
   }
 }
