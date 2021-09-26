@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FETCH_COLORS, CONVERT_COLOR_ID } from './types'
+import { FETCH_PRODUCTS, FETCH_COLORS } from './types'
 import ProductService from 'common/product.service'
 
 export const fetchProducts = () => async (dispatch) => {
@@ -26,4 +26,3 @@ export const fetchColors = () => async (dispatch) => {
     console.log(err)
   }
 }
-
