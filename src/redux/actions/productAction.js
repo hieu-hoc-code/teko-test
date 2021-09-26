@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FETCH_COLORS } from './types'
+import { FETCH_PRODUCTS, FETCH_COLORS, CHANGE_ITEM_VALUE } from './types'
 import ProductService from 'common/product.service'
 
 export const fetchProducts = () => async (dispatch) => {
@@ -25,4 +25,11 @@ export const fetchColors = () => async (dispatch) => {
   } catch (err) {
     console.log(err)
   }
+}
+
+export const handleItemValue = (val) => (dispatch) => {
+  dispatch({
+    type: CHANGE_ITEM_VALUE,
+    payload: val,
+  })
 }
