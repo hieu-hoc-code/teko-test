@@ -4,13 +4,15 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import ApiService from 'common/api.service'
+import { Provider } from 'react-redux'
+import store from './store'
 
 ApiService.init()
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 )
 
