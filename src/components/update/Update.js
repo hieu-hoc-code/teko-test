@@ -2,14 +2,26 @@ import React, { Component } from 'react'
 
 import './update.scss'
 
+import Exit from 'components/images/cross.png'
+
+function openForm() {
+  document.getElementById('popup-data').style.display = 'block'
+  document.getElementById('tb-product').style.opacity = '0.5'
+}
+function closeForm() {
+  document.getElementById('popup-data').style.display = 'none'
+  document.getElementById('tb-product').style.opacity = '1'
+}
 class Update extends Component {
   render() {
     return (
       <div className="update">
-        <div className="table-product">
-          <div className="submit">
-            <button type="button">Submit</button>
-          </div>
+        <div className="submit">
+          <button type="submit" onClick={openForm}>
+            Submit
+          </button>
+        </div>
+        <div className="table-product" id="tb-product">
           <table>
             <tr className="title-pro">
               <td>ID</td>
@@ -43,6 +55,28 @@ class Update extends Component {
               </td>
             </tr>
           </table>
+        </div>
+        <div className="popup-data" id="popup-data">
+          <div className="re-uploaded">
+            <span>Re-uploaded Products</span>
+            <img src={Exit} alt="exit" onClick={closeForm}></img>
+          </div>
+          <div className="content-uploaded">
+            <div className="img-sp">
+              <img src="" alt="img-sp"></img>
+            </div>
+            <div className="information">
+              <p>Laptop Acer nitro 5</p>
+              <p>Id : 1</p>
+              <p>
+                SKU : <span>123456</span>
+              </p>
+              <p>
+                Color : <span>Black</span>
+              </p>
+            </div>
+          </div>
+          <button type="button" id="ok" onClick={closeForm}>OK</button>
         </div>
       </div>
     )

@@ -1,31 +1,12 @@
 @import '_setting.scss';
 
 .update{
+  position: relative;
+  width: 100%;
   .table-product{
     background-color: rgb(209, 248, 194);
     width: 90%;
-    margin: 42px auto;
-    .submit{
-      width: 100%;
-      background-color: antiquewhite;
-      button{
-        margin-bottom: 12px;
-        padding: 5px 15px;
-        float: right;
-        border: none;
-        background-color: aquamarine;
-        cursor: pointer;
-        border-radius: 5px;
-        &:hover{
-          box-shadow: 2px 2px 3px #bbb;
-          background-color: darken(aquamarine, 10);
-        }
-        &:active{
-          transform: translateY(3px);
-          box-shadow: none;
-        }
-      }
-    }
+    margin: auto;
     table{
       width: 100%;
       tr{
@@ -41,5 +22,57 @@
         height: 60px;
       }
     }
+  }
+  .submit{
+    width: 100%;
+    background-color: antiquewhite;
+    margin: 42px auto 12px;
+    button{
+      padding: 5px 15px;
+      border: none;
+      background-color: aquamarine;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-left: 90%;
+      &:hover{
+        box-shadow: 2px 2px 3px #bbb;
+        background-color: darken(aquamarine, 10);
+      }
+      &:active{
+        transform: translateY(3px);
+        box-shadow: none;
+      }
+    }
+  }
+  .popup-data{
+    position: absolute;
+    width: 60%;
+    background-color: rgb(226, 226, 226);
+    transform: translate(35%, -50%);
+    .re-uploaded{
+      display: flex;
+      justify-content: space-between;
+      img{
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        padding: 5px;
+        background-color: bisque;
+      }
+    }
+    .content-uploaded{
+      display: flex;
+      .img-sp{
+        flex: 40%;
+        background-color: pink;
+      }
+      .information{
+        flex: 60%
+      }
+    }
+  }
+  button[id=ok]{
+    float: right;
+    cursor: pointer;
   }
 }
