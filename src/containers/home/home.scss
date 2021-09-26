@@ -28,9 +28,7 @@
   .content-pro{
     width: 75%;
     margin: auto;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 300px 300px;
+    
     background-color: $app-bg-color;
     border-radius: 12px;
     .product-container{
@@ -40,21 +38,30 @@
       border-radius: 12px;
       padding: 12px;
       cursor: pointer;
-      &:hover{
-        transform: scale(1.05);
-        transition: 0.5s;
-      }
-      .img-product{
-        display: flex;
-        justify-content: center;
-        img{
-          width: 100px;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      .pro{
+        box-shadow: 0 0 3px #bbb;
+        margin: 12px;
+        padding: 12px;
+        border-radius: 8px;
+        &:hover{
+          transform: scale(1.05);
+          transition: 0.2s;
+        }
+        .img-product{
+          display: flex;
+          justify-content: center;
+          img{
+            width: 100px;
+          }
+        }
+        .item{
+          display: grid;
+  
         }
       }
-      .item{
-        display: grid;
-
-      }
+      
     }
   }
   .end{

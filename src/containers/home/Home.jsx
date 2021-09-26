@@ -22,12 +22,11 @@ const Home = () => {
       <div className="content-pro">
         <div className="product-container">
           {items.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className="pro">
               <div className="img-product">
-                <img src={item.image} alt="logo" />
+                <img src={item.image} alt="pro" />
               </div>
               <div className="item">
-                <span>{item.errorDescription}</span>
                 <h3>{item.name}</h3>
                 <span>ID : {item.id}</span>
                 <span>SKU : {item.sku}</span>

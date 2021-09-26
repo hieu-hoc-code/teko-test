@@ -13,6 +13,7 @@ class Header extends Component {
           <div className="title">
             <NavLink to="/">
               <img src={Logo} alt="logo" />
+
               Teko Laptop
             </NavLink>
             <h2>Product</h2>
