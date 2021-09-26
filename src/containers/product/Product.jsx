@@ -5,6 +5,7 @@ import {
   handleItemValue,
 } from 'redux/actions/productAction'
 import { useSelector, useDispatch, connect } from 'react-redux'
+
 import convertColor from 'utils/convertColor'
 import Modal from 'components/modal/Modal'
 
@@ -34,7 +35,7 @@ const Product = () => {
         </button>
       </div>
       {/* modal */}
-      {isModal ? <Modal /> : <div></div>}
+      {isModal === false ? <Modal /> : <div></div>}
       <div className="table-product" id="tb-product">
         <table>
           <thead>
@@ -74,7 +75,7 @@ const Product = () => {
                   ></input>
                 </td>
                 <td>
-                  <select name="color" id="color">
+                  <select name="color" id="color" className="color-pro">
                     <option value>Default</option>
                     {colors.map((color) => (
                       <option

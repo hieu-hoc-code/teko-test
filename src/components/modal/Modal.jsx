@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Exit from 'assets/images/cross.png'
 import './modal.scss'
+
 
 const Modal = () => {
  return (

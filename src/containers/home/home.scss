@@ -5,9 +5,10 @@
   color: $app-color;
   padding: calc(#{$app-padding * 2}) 0;
   .edit-pro{
-    width: 90%;
+    width: 80%;
     text-align: right;
     margin-bottom: 25px;
+    margin: 0 auto 24px;
     a{
       text-decoration: none;
       padding: 5px 15px;
@@ -15,10 +16,12 @@
       color: #333;
       border-radius: 8px;
       background-color: aquamarine;
-      box-shadow: 5px 3px 3px rgb(116, 116, 116);
+      
       &:hover{
         background-color: darken(aquamarine, 15) ;
         color: black;
+        box-shadow: 5px 3px 3px rgb(116, 116, 116);
+        transform: translate(-3px);
       }
       &:active{
         box-shadow: none;
@@ -28,11 +31,10 @@
   .content-pro{
     width: 75%;
     margin: auto;
-    
     background-color: $app-bg-color;
     border-radius: 12px;
     .product-container{
-      box-shadow: 5px 5px 8px #bbb;
+      box-shadow: 0 0 8px #bbb;
       margin: 12px;
       background-color: white;
       border-radius: 12px;
@@ -48,6 +50,7 @@
         &:hover{
           transform: scale(1.05);
           transition: 0.2s;
+          box-shadow: 0 0 5px rgb(148, 132, 132);
         }
         .img-product{
           display: flex;

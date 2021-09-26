@@ -18,7 +18,7 @@
   .header-content{
     width: 70%;
     .title{
-      padding: 2rem 5rem;
+      padding: 2rem 0 0;
       display: flex;
       justify-content: space-between;
       a{
@@ -48,7 +48,7 @@
         text-align: center;
         a{
           h1{
-            margin: 0 auto 54px;
+            margin: 0 auto 24px;
             &:hover{
               color: red;
             }
