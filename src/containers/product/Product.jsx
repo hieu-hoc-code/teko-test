@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
-import './update.scss'
+import './product.scss'
 
-import Exit from 'components/images/cross.png'
-import { Link } from 'react-router-dom'
+import Exit from 'assets/images/cross.png'
 
 function openForm() {
   document.getElementById('popup-data').style.display = 'block'
@@ -13,7 +12,7 @@ function closeForm() {
   document.getElementById('popup-data').style.display = 'none'
   document.getElementById('tb-product').style.opacity = '1'
 }
-class Update extends Component {
+class Product extends Component {
   render() {
     return (
       <div className="update">
@@ -88,4 +87,4 @@ class Update extends Component {
   }
 }
 
-export default Update
+export default Product
