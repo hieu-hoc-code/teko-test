@@ -1,17 +1,12 @@
-import React, { useEffect } from 'react'
-import { fetchProducts, fetchColors } from 'redux/actions/productAction'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
 import convertColor from 'utils/convertColor'
 import { NavLink } from 'react-router-dom'
 
+import { useSelector } from 'react-redux'
 import './home.scss'
 
 const Home = () => {
   const { items, colors } = useSelector((state) => state.product)
-  const dispatch = useDispatch()
-  useEffect(() => dispatch(fetchProducts()), [])
-  useEffect(() => dispatch(fetchColors()), [])
-  
   return (
     <div className="products">
       <div className="edit-pro">
