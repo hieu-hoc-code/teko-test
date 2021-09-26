@@ -5,60 +5,75 @@
   color: $app-color;
   position: relative;
   padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
   &::after{
     position: absolute;
     content: "";
     top: 100%;
-    width: 90%;
+    width: 70%;
     height: 3px;
     background-color: rgb(180, 180, 180);
-    transform: translate( 5%, 0);
   }
-  .title{
-    padding: 2rem 5rem;
-    display: flex;
-    justify-content: space-between;
-    span{
-      font-style: italic;
-      font-size: 24px;
-      font-weight: bold;
-      color: rgb(248, 79, 73);
-      img{
-        width: 6rem;
+  .header-content{
+    width: 70%;
+    .title{
+      padding: 2rem 5rem;
+      display: flex;
+      justify-content: space-between;
+      a{
+        font-style: italic;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(247, 85, 64);
+        &:hover{
+          color: red;
+        }
+        img{
+          width: 6rem;
+        }
+      }
+      h2{
+        margin: 0;
+        padding: 0;
       }
     }
-    h2{
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .our{
-    width: 100%;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    .tohome{
-      width: 550px;
-      text-align: center;
-      a{
-        h1{
-          margin: 0 auto 54px;
+    .our{
+      width: 100%;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      .tohome{
+        width: 550px;
+        text-align: center;
+        a{
+          h1{
+            margin: 0 auto 54px;
+            &:hover{
+              color: red;
+            }
+          }
         }
       }
     }
-  }
-  .menu{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    transform: translateX(50%);
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    span{
-      cursor: pointer;
-      &:hover{
-        color: blue;
+    .menu{
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+      transform: translateX(20%);
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: rgb(242, 216, 247);
+      padding: 12px 0 8px;
+      border-radius: 8px;
+      span{
+        cursor: pointer;
+        &:hover{
+          color: rgb(248, 42, 104);
+          transform: translateY(-5px);
+          transition: 0.2s;
+        }
       }
     }
   }

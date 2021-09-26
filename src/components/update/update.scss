@@ -3,10 +3,13 @@
 .update{
   position: relative;
   width: 100%;
+  background-color: $app-bg-color;
+  padding-bottom: 50px;
   .table-product{
     background-color: rgb(209, 248, 194);
     width: 90%;
     margin: auto;
+    padding-bottom: 12px;
     table{
       width: 100%;
       tr{
@@ -25,7 +28,6 @@
   }
   .submit{
     width: 100%;
-    margin: 42px auto 12px;
     button{
       padding: 5px 15px;
       border: none;
@@ -33,6 +35,7 @@
       cursor: pointer;
       border-radius: 5px;
       margin-left: 90%;
+      margin: 42px 90% 12px;
       &:hover{
         box-shadow: 2px 2px 3px #bbb;
         background-color: darken(aquamarine, 10);
@@ -44,21 +47,34 @@
     }
   }
   .popup-data{
-    display: block;
+    display: none;
     position: absolute;
     width: 60%;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(255, 255, 255);
     transform: translate(35%, -150%);
     padding: 24px;
+    box-shadow: 0 0 5px #bbb;
     .re-uploaded{
       display: flex;
       justify-content: space-between;
+      margin-bottom: 24px;
+      span{
+        font-weight: bold;
+      }
       img{
         width: 15px;
         height: 15px;
         cursor: pointer;
         padding: 5px;
         background-color: bisque;
+        &:hover{
+          transform: translateY(-2px);
+          box-shadow: 2px 2px 3px #bbb;
+        }
+        &:active{
+          transform: translateY(2px);
+          box-shadow: none;
+        }
       }
     }
     .content-uploaded{
@@ -68,6 +84,7 @@
         background-color: pink;
       }
       .information{
+        margin-left: 24px;
         flex: 60%
       }
     }
@@ -75,5 +92,19 @@
   button[id=ok]{
     float: right;
     cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: aquamarine;
+    &:hover{
+      background-color: aqua;
+      transition: 0.2s;
+      box-shadow: 2px 2px 3px #bbb;
+      transform: translateY(-3px);
+    }
+    &:active{
+      transform: translateY(3px);
+      box-shadow: none;
+    }
   }
 }
