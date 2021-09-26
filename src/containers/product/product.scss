@@ -1,7 +1,7 @@
 @import 'scss/_setting.scss';
 
 .update{
-  position: relative;
+  
   width: 100%;
   background-color: $app-bg-color;
   padding-bottom: 50px;
@@ -31,14 +31,14 @@
   }
   .submit{
     width: 100%;
+    
     button{
       padding: 5px 15px;
       border: none;
       background-color: aquamarine;
       cursor: pointer;
       border-radius: 5px;
-      margin-left: 90%;
-      margin: 42px 90% 12px;
+      margin: 42px 82% 12px;
       &:hover{
         box-shadow: 2px 2px 3px #bbb;
         background-color: darken(aquamarine, 10);

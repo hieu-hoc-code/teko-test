@@ -22,6 +22,8 @@ const Product = () => {
       <div className="submit" >
         <button type="submit" onClick={submitHandle}>Submit</button>
       </div>
+      {/* modal */}
+      {isModal ? <Modal /> : <div></div>}
       <div className="table-product" id="tb-product">
         <table>
           <tr className="title-pro">
@@ -72,8 +74,7 @@ const Product = () => {
           </tbody>
         </table>
       </div>
-      {/* modal */}
-      {isModal ? <Modal /> : <div></div>}
+      
     </div>
   )
 }

@@ -16,7 +16,6 @@ class Header extends Component {
 
               Teko Laptop
             </NavLink>
-            <h2>Product</h2>
           </div>
           <div className="our">
             <div className="tohome">
