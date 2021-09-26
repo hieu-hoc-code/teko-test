@@ -1,11 +1,13 @@
 import React from 'react'
+import Exit from 'assets/images/cross.png'
+import './modal.scss'
 
 const Modal = () => {
  return (
   <div className="popup-data" id="popup-data">
         <div className="re-uploaded">
           <span>Re-uploaded Products</span>
-          {/* <img src={Exit} alt="exit" onClick={closeForm}></img> */}
+          <img src={Exit} alt="exit"></img>
         </div>
         <div className="content-uploaded">
           <div className="img-sp">

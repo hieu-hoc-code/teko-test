@@ -1,0 +1,43 @@
+.popup-data{
+ display: block;
+ position: absolute;
+ width: 60%;
+ background-color: rgb(255, 255, 255);
+ transform: translate(30%, -150%);
+ padding: 24px;
+ box-shadow: 0 0 5px #bbb;
+ .re-uploaded{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 24px;
+   span{
+     font-weight: bold;
+   }
+   img{
+     width: 15px;
+     height: 15px;
+     cursor: pointer;
+     padding: 5px;
+     background-color: bisque;
+     &:hover{
+       transform: translateY(-2px);
+       box-shadow: 2px 2px 3px #bbb;
+     }
+     &:active{
+       transform: translateY(2px);
+       box-shadow: none;
+     }
+   }
+ }
+ .content-uploaded{
+   display: flex;
+   .img-sp{
+     flex: 40%;
+     background-color: pink;
+   }
+   .information{
+     margin-left: 24px;
+     flex: 60%
+   }
+ }
+}
