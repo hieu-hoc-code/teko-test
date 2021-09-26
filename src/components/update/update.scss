@@ -25,7 +25,6 @@
   }
   .submit{
     width: 100%;
-    background-color: antiquewhite;
     margin: 42px auto 12px;
     button{
       padding: 5px 15px;
@@ -45,10 +44,12 @@
     }
   }
   .popup-data{
+    display: block;
     position: absolute;
     width: 60%;
     background-color: rgb(226, 226, 226);
-    transform: translate(35%, -50%);
+    transform: translate(35%, -150%);
+    padding: 24px;
     .re-uploaded{
       display: flex;
       justify-content: space-between;

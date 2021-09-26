@@ -3,6 +3,8 @@ import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import Home from 'containers/home/Home'
+import Header from 'components/header/Header'
+import Navigation from 'router/Navigation'
 
 import { Provider } from 'react-redux'
 import store from './store'
@@ -12,7 +14,8 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Home />
+          <Header />
+          <Navigation />
         </div>
       </Router>
     </Provider>

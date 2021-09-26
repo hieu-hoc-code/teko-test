@@ -3,17 +3,40 @@
 .products{
   background-color: $app-bg-color;
   color: $app-color;
+  padding: calc(#{$app-padding * 2}) 0;
+  .edit-pro{
+    width: 90%;
+    margin: auto;
+    text-align: right;
+    margin-bottom: 25px;
+    a{
+      text-decoration: none;
+      padding: 5px 15px;
+      background-color: white;
+      color: #333;
+      border-radius: 8px;
+      background-color: aquamarine;
+      &:hover{
+        background-color: darken(aquamarine, 15) ;
+        color: black;
+        box-shadow: 5px 3px 3px rgb(116, 116, 116);
+      }
+      &:active{
+        transform: translateY(3px);
+        box-shadow: none;
+      }
+    }
+  }
   .content-pro{
     width: 90%;
     margin: auto;
-    padding: calc(#{$app-padding * 5}) 0;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 300px 300px;
     .product-container{
-      border: 3px solid white;
+      border: 3px solid rgb(32, 32, 32);
       margin: 12px;
-
+      background-color: white;
       .img-product{
         img{
           width: 100px;
