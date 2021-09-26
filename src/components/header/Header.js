@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import './header.scss'
 
-import Logo from 'components/images/logo.png'
+import Logo from 'assets/images/logo.png'
 
 class Header extends Component {
   render() {

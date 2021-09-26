@@ -1,17 +1,45 @@
-import React, { useEffect } from 'react'
-import { fetchPosts } from 'redux/actions/clientActions'
-import { useSelector, useDispatch } from 'react-redux'
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Home = () => {
-  const { items } = useSelector(state => state.client)
-  const dispatch = useDispatch()
-  useEffect(() => dispatch(fetchPosts()), [])
-  return (
-    <div>
-      <h2>Hello world</h2>
-      <h3>{items.map(item => (<div key={item.id}>{item.title}</div>))}</h3>
-    </div>
-  )
+import './home.scss'
+
+import Laptop from 'assets/images/laptop.png'
+
+class Home extends Component {
+  render() {
+    return (
+      <div className="products">
+        <div className="edit-pro">
+          <NavLink activeClassName="show" to="/update">Update Products</NavLink>
+        </div>
+        <div className="content-pro">
+          <div className="product-container">
+            <div className="img-product">
+              <img src={Laptop} alt="logo" />
+            </div>
+            <div className="item">
+              <h3>Laptop 1</h3>
+              <span>ID : 01</span>
+              <span>SKU : 1710135</span>
+              <span>Color : Black</span>
+            </div>
+          </div>
+          <div className="product-container">
+            <div className="img-product">
+              <img src={Laptop} alt="logo" />
+            </div>
+            <div className="item">
+              <h3>Laptop 1</h3>
+              <span>ID : 01</span>
+              <span>SKU : 1710135</span>
+              <span>Color : Black</span>
+            </div>
+          </div>
+        </div>
+        <div className="end">End !</div>
+      </div>
+    )
+  }
 }
 
 export default Home
